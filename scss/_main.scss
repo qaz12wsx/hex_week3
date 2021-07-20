@@ -1,3 +1,122 @@
-.header a{
-    font-size: 24px;
+@mixin pad {
+    @media(max-width: 768px) {
+        @content
+    }
+}
+@mixin mobile {
+    @media(max-width: 767px) {
+        @content
+    }
+}
+
+body{
+    font-size: $fz20;
+    line-height: $lh30;
+    font-family: $eng;
+}
+
+.header .hd_container{
+    margin: 0 auto;
+    padding: 0 10px;
+    @include pad{
+        padding: 0;
+        max-width: $pad-width;
+    }
+    @include mobile{
+        padding: 0;
+        max-width: $mobile-width;
+    }
+    h1{
+        padding: 9px 10px;
+        img{
+            display: block;
+        }
+    }
+    .pc-menu{
+        max-width: 455px;
+        li{
+            padding: 0;
+            width: 150px;
+            text-align: center;
+        }
+        i{
+            padding-right: 3px;
+        }
+        a{
+            color:$color-gray;
+            font-family: $eng;
+        }
+    }
+    .mobile-menu-list{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+        .menu-cart{
+            position: relative;
+            font-size: $fz24;
+            color: $color-gray;
+            padding: 0px 15px;
+            span{
+                position: absolute;
+                top: -10px;
+                right: 3px;
+                font-size: 10px;
+                color: $color-w;
+                background-color: #916000;
+                border: 2px solid #916000;
+                border-radius: 40px;
+                padding: 1px 4px;
+            }
+        }
+        .menu-list{
+            padding: 12px 22px;
+        }
+    }
+    @include mobile{
+        .pc-menu{
+            display: none;
+        }
+        .mobile-menu{
+            display: block;
+            color: $color-gray;
+        }
+        .mobile-menu-list{
+            /*隱藏選單*/
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            /*結束*/
+            transition: opacity 1.8s;
+            margin-top: 2px;
+            position: absolute;
+            z-index: 100;
+            top: 50px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            li{
+                background-color: #707070;
+                border-top: 1px solid $color-w;
+                a{
+                    display: block;
+                    width: 100%;
+                    line-height: 56px;
+                    color: $color-w;
+                    font-family: $eng;
+                }
+            }
+        }
+        .showdmenu{
+            max-height: 280px;
+            opacity: 1;
+        }
+        h1{
+            padding-left: 20px;
+        }
+    }
 }

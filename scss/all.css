@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v5.0.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11477,7 +11478,139 @@ fieldset:disabled .btn {
   }
 }
 
-.header a {
+body {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header .hd_container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .header .hd_container {
+    padding: 0;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .hd_container {
+    padding: 0;
+    max-width: 345px;
+  }
+}
+
+.header .hd_container h1, .header .hd_container .h1 {
+  padding: 9px 10px;
+}
+
+.header .hd_container h1 img, .header .hd_container .h1 img {
+  display: block;
+}
+
+.header .hd_container .pc-menu {
+  max-width: 455px;
+}
+
+.header .hd_container .pc-menu li {
+  padding: 0;
+  width: 150px;
+  text-align: center;
+}
+
+.header .hd_container .pc-menu i {
+  padding-right: 3px;
+}
+
+.header .hd_container .pc-menu a {
+  color: #8D8D8D;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header .hd_container .mobile-menu-list {
+  display: none;
+}
+
+.header .hd_container .mobile-menu {
+  display: none;
+}
+
+.header .hd_container .mobile-menu .menu-cart {
+  position: relative;
   font-size: 24px;
+  color: #8D8D8D;
+  padding: 0px 15px;
+}
+
+.header .hd_container .mobile-menu .menu-cart span {
+  position: absolute;
+  top: -10px;
+  right: 3px;
+  font-size: 10px;
+  color: #FFF;
+  background-color: #916000;
+  border: 2px solid #916000;
+  border-radius: 40px;
+  padding: 1px 4px;
+}
+
+.header .hd_container .mobile-menu .menu-list {
+  padding: 12px 22px;
+}
+
+@media (max-width: 767px) {
+  .header .hd_container .pc-menu {
+    display: none;
+  }
+  .header .hd_container .mobile-menu {
+    display: block;
+    color: #8D8D8D;
+  }
+  .header .hd_container .mobile-menu-list {
+    /*隱藏選單*/
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    /*結束*/
+    -webkit-transition: opacity 1.8s;
+    transition: opacity 1.8s;
+    margin-top: 2px;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
+  .header .hd_container .mobile-menu-list li {
+    background-color: #707070;
+    border-top: 1px solid #FFF;
+  }
+  .header .hd_container .mobile-menu-list li a {
+    display: block;
+    width: 100%;
+    line-height: 56px;
+    color: #FFF;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .header .hd_container .showdmenu {
+    max-height: 280px;
+    opacity: 1;
+  }
+  .header .hd_container h1, .header .hd_container .h1 {
+    padding-left: 20px;
+  }
 }
 /*# sourceMappingURL=all.css.map */

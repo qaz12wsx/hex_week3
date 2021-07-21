@@ -11480,45 +11480,26 @@ fieldset:disabled .btn {
 
 body {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.header .hd_container {
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-@media (max-width: 768px) {
-  .header .hd_container {
-    padding: 0;
-    max-width: 750px;
-  }
-}
-
-@media (max-width: 767px) {
-  .header .hd_container {
-    padding: 0;
-    max-width: 345px;
-  }
 }
 
 .header .hd_container h1, .header .hd_container .h1 {
   padding: 9px 10px;
 }
 
-.header .hd_container h1 img, .header .hd_container .h1 img {
-  display: block;
-}
-
 .header .hd_container .pc-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 455px;
 }
 
 .header .hd_container .pc-menu li {
-  padding: 0;
-  width: 150px;
-  text-align: center;
+  padding: 0 12px;
 }
 
 .header .hd_container .pc-menu i {
@@ -11538,26 +11519,30 @@ body {
   display: none;
 }
 
-.header .hd_container .mobile-menu .menu-cart {
+.header .hd_container .menu-cart {
   position: relative;
   font-size: 24px;
   color: #8D8D8D;
   padding: 0px 15px;
 }
 
-.header .hd_container .mobile-menu .menu-cart span {
+.header .hd_container .menu-cart .cart-icon {
+  font-size: 40px;
+}
+
+.header .hd_container .menu-cart span {
   position: absolute;
-  top: -10px;
-  right: 3px;
+  top: 8px;
+  left: 50px;
   font-size: 10px;
   color: #FFF;
   background-color: #916000;
   border: 2px solid #916000;
   border-radius: 40px;
-  padding: 1px 4px;
+  padding: 1px 5px;
 }
 
-.header .hd_container .mobile-menu .menu-list {
+.header .hd_container .menu-list {
   padding: 12px 22px;
 }
 
@@ -11577,7 +11562,7 @@ body {
     /*結束*/
     -webkit-transition: opacity 1.8s;
     transition: opacity 1.8s;
-    margin-top: 2px;
+    margin-top: 20px;
     position: absolute;
     z-index: 100;
     top: 50px;
@@ -11604,6 +11589,12 @@ body {
     line-height: 56px;
     color: #FFF;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+  .header .hd_container .mobile-menu-list li a:hover {
+    background: #FFF;
+    color: #8D8D8D;
   }
   .header .hd_container .showdmenu {
     max-height: 280px;

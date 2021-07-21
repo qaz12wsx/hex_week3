@@ -11,33 +11,20 @@
 
 body{
     font-size: $fz20;
-    line-height: $lh30;
+    line-height: 1.5;
     font-family: $eng;
 }
 
 .header .hd_container{
-    margin: 0 auto;
-    padding: 0 10px;
-    @include pad{
-        padding: 0;
-        max-width: $pad-width;
-    }
-    @include mobile{
-        padding: 0;
-        max-width: $mobile-width;
-    }
     h1{
         padding: 9px 10px;
-        img{
-            display: block;
-        }
     }
     .pc-menu{
+        display: flex;
+        align-items: center;
         max-width: 455px;
         li{
-            padding: 0;
-            width: 150px;
-            text-align: center;
+            padding: 0 12px;
         }
         i{
             padding-right: 3px;
@@ -52,26 +39,29 @@ body{
     }
     .mobile-menu{
         display: none;
-        .menu-cart{
-            position: relative;
-            font-size: $fz24;
-            color: $color-gray;
-            padding: 0px 15px;
-            span{
-                position: absolute;
-                top: -10px;
-                right: 3px;
-                font-size: 10px;
-                color: $color-w;
-                background-color: #916000;
-                border: 2px solid #916000;
-                border-radius: 40px;
-                padding: 1px 4px;
-            }
+    }
+    .menu-cart{
+        position: relative;
+        font-size: $fz24;
+        color: $color-gray;
+        padding: 0px 15px;
+        .cart-icon{
+            font-size: 40px;
         }
-        .menu-list{
-            padding: 12px 22px;
+        span{
+            position: absolute;
+            top: 8px;
+            left: 50px;
+            font-size: 10px;
+            color: $color-w;
+            background-color: #916000;
+            border: 2px solid #916000;
+            border-radius: 40px;
+            padding: 1px 5px;
         }
+    }
+    .menu-list{
+        padding: 12px 22px;
     }
     @include mobile{
         .pc-menu{
@@ -88,7 +78,7 @@ body{
             opacity: 0;
             /*結束*/
             transition: opacity 1.8s;
-            margin-top: 2px;
+            margin-top: 20px;
             position: absolute;
             z-index: 100;
             top: 50px;
@@ -108,6 +98,11 @@ body{
                     line-height: 56px;
                     color: $color-w;
                     font-family: $eng;
+                    transition: 0.3s all;
+                    &:hover{
+                        background: $color-w;
+                        color: $color-gray;
+                    }
                 }
             }
         }

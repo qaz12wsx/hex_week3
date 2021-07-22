@@ -11484,8 +11484,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+body a {
+  text-decoration: none;
+}
+
+body img {
+  display: block;
+  width: 100%;
+}
+
 .header .hd_container h1, .header .hd_container .h1 {
-  padding: 9px 10px;
+  padding: 9px 0;
 }
 
 .header .hd_container .pc-menu {
@@ -11495,7 +11504,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 455px;
 }
 
 .header .hd_container .pc-menu li {
@@ -11509,6 +11517,7 @@ body {
 .header .hd_container .pc-menu a {
   color: #8D8D8D;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: none;
 }
 
 .header .hd_container .mobile-menu-list {
@@ -11517,23 +11526,17 @@ body {
 
 .header .hd_container .mobile-menu {
   display: none;
-}
-
-.header .hd_container .menu-cart {
   position: relative;
-  font-size: 24px;
-  color: #8D8D8D;
-  padding: 0px 15px;
 }
 
-.header .hd_container .menu-cart .cart-icon {
-  font-size: 40px;
+.header .hd_container .cart-icon {
+  font-size: 30px;
 }
 
-.header .hd_container .menu-cart span {
+.header .hd_container span {
   position: absolute;
   top: 8px;
-  left: 50px;
+  left: 20px;
   font-size: 10px;
   color: #FFF;
   background-color: #916000;
@@ -11542,16 +11545,17 @@ body {
   padding: 1px 5px;
 }
 
-.header .hd_container .menu-list {
-  padding: 12px 22px;
-}
-
 @media (max-width: 767px) {
   .header .hd_container .pc-menu {
     display: none;
   }
   .header .hd_container .mobile-menu {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #8D8D8D;
   }
   .header .hd_container .mobile-menu-list {
@@ -11562,7 +11566,6 @@ body {
     /*結束*/
     -webkit-transition: opacity 1.8s;
     transition: opacity 1.8s;
-    margin-top: 20px;
     position: absolute;
     z-index: 100;
     top: 50px;
@@ -11592,16 +11595,153 @@ body {
     -webkit-transition: 0.3s all;
     transition: 0.3s all;
   }
-  .header .hd_container .mobile-menu-list li a:hover {
-    background: #FFF;
-    color: #8D8D8D;
-  }
   .header .hd_container .showdmenu {
     max-height: 280px;
     opacity: 1;
   }
-  .header .hd_container h1, .header .hd_container .h1 {
-    padding-left: 20px;
+}
+
+.banner {
+  background: url(../img/banner.jpg) no-repeat padding-box;
+  background-size: cover;
+  background-position: center;
+  height: 870px;
+}
+
+.banner .description {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #FFF;
+}
+
+.banner .description h2, .banner .description .h2 {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.banner .description p {
+  max-width: 455px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.banner .description a {
+  border: 2px solid #FFF;
+  border-radius: 30px;
+  color: #FFF;
+  font-size: 26px;
+  width: 350px;
+  display: block;
+  text-align: center;
+  padding: 9px 0;
+  margin-top: 16px;
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+}
+
+.banner .description a:hover {
+  background: #FFF;
+  color: #916000;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 740px;
+    background-size: auto;
+    background-position: 15% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    height: 480px;
+    background-size: cover;
+  }
+}
+
+.content {
+  margin-top: 60px;
+}
+
+.content .text {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 350px;
+}
+
+.content .text h2, .content .text .h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: bold;
+}
+
+.content .text p {
+  font-family: PingFangTC-Regular, sans-serif;
+}
+
+.content .text a {
+  color: #916000;
+  font-family: PingFangTC-Regular, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.content .text .content-btn {
+  border: 2px solid #000;
+  border-radius: 30px;
+  color: #000;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  padding: 15.8px 0;
+  margin-top: 16px;
+  font-weight: 700;
+  font-family: PingFangTC-Regular, sans-serif;
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+}
+
+.content .text .content-btn:hover {
+  background: #8D8D8D;
+  color: #FFF;
+}
+
+.content .long {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.content .long img {
+  height: 1080px;
+}
+
+.content .long li {
+  margin-bottom: 52px;
+}
+
+.content .long h2, .content .long .h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.content .long p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 767px) {
+  .content .content {
+    margin-top: 40px;
+  }
+  .content .content .long img {
+    height: 680px;
   }
 }
 /*# sourceMappingURL=all.css.map */

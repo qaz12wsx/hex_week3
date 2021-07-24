@@ -57,8 +57,8 @@ body{
             left: 20px;
             font-size: 10px;
             color: $color-w;
-            background-color: #916000;
-            border: 2px solid #916000;
+            background-color: $color-br;
+            border: 2px solid $color-br;
             border-radius: 40px;
             padding: 1px 5px;
         }
@@ -140,7 +140,7 @@ body{
             transition: 0.7s all;
             &:hover{
                 background: $color-w;
-                color:#916000;
+                color:$color-br;
             }
         }
     }
@@ -172,7 +172,7 @@ body{
             font-family: $chi;
         }
         a{
-            color: #916000;
+            color: $color-br;
             font-family: $chi;
             font-size: 16px;
             line-height: 24px;
@@ -229,7 +229,7 @@ body{
         transition: 0.1s all;
         height: 540px;
         &:hover{
-            outline: 2px solid #916000;
+            outline: 2px solid $color-br;
         }
         img{
             height: 100%;
@@ -331,14 +331,14 @@ body{
         position: relative;
         margin-bottom: 112px;
         input{
-            border: 2px solid #916000;
+            border: 2px solid $color-br;
             padding: 16px 0 16px 16px;
             width: 100%;
         }
         button{
             position: absolute;
-            background: #916000;
-            border-color: #916000;
+            background: $color-br;
+            border-color: $color-br;
             color:$color-w;
             padding: 0 5%;
             height: 60px;
@@ -352,7 +352,7 @@ body{
 }
 
 .footer{
-    background-color: #916000;
+    background-color: $color-br;
     color: $color-w;
     .ft-logo{
         padding-top: 18px;
@@ -368,6 +368,51 @@ body{
         p{
             font-size: 14px;
             line-height: 21px;
+        }
+    }
+}
+
+.thin-banner{
+    background: $color-br;
+    
+    li a{
+        color:$color-w;
+        padding: 11px 24px 11px 0;
+    }
+}
+
+.login{
+    margin: 80px auto;
+    h2{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    label{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .login-img{
+        background: url('../img/login1.jpg') no-repeat;
+        background-size: 103%;
+        background-position: center;
+        height: 730px;
+    }
+    a{
+        color:$color-br;
+        font-size: 16px;
+    }
+    @include pad{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    @include mobile{
+        margin-top: 40px;
+        margin-bottom: 100px;
+        .login-img{
+            background: url('../img/login1-mob.jpg') no-repeat;
+            background-size: 103%;
+            background-position: center;
+            height: 230px;
         }
     }
 }

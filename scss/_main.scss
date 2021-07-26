@@ -424,6 +424,14 @@ body{
         h3{
             font-size: 24px;
         }
+        .add-btn{
+            color:$color-br;
+        }
+        h4{
+            color:$color-br;
+            line-height: 28px;
+            font-weight: bold;
+        }
         p{
             font-size: 16px;
         }
@@ -489,6 +497,20 @@ body{
             font-size: 16px;
         }
     }
+    .add-btn{
+        color: #000;
+        span{
+            color: $color-br;
+        }
+    }
+    .add-alert{
+        h4{
+            color:$color-br;
+            line-height: 28px;
+            font-weight: bold;
+        }
+    }
+    
     @include mobile{
         margin-top: 40px;
         margin-bottom: 40px;
@@ -497,5 +519,56 @@ body{
             margin-bottom: 24px;
         }
     }
+}
 
+.member{
+    margin-top: 80px;
+    margin-bottom: 60px;
+    color:$color-gray;
+    font-family: $chi;
+    a{
+        color:$color-gray;
+        &.active{
+            padding-bottom: 5px;
+            border-bottom: 2px solid $color-br;
+        }
+    }
+    h2{
+        font-size: 20px;
+        color:$color-gray;
+    }
+    h3{
+        font-size: 16px;
+        border-bottom: 1px solid $color-gray;
+        font-weight: bold;
+        color:#000;
+    }
+    h4{
+        font-size: 16px;
+        color:$color-gray;
+        i{
+            color:#000;
+        }
+        span{
+            font-size: 20px;
+        }
+    }
+    label{
+        font-size: 16px;
+        color:$color-gray;
+    }
+    .checkbox:checked{
+        background-color: $color-br;
+        border-color: $color-br;
+    }
+    li{
+        font-size: 16px;
+        .invite{
+            font-size: 14px;
+            color:#A5A5A5;
+        }
+    }
+    @include pad{
+        margin-top: 45px;
+    }
 }

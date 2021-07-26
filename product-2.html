@@ -45,7 +45,7 @@
                     <i class="material-icons cart-icon">
                         shopping_cart
                     </i>
-                    <span>1</span>
+                    <span>3</span>
                     <i class="menu-list fas fa-bars fa-2x ms-4"></i>
                 </div>
             </div>
@@ -87,12 +87,33 @@
                                 <button type="button" class="btn btn-sm pb-0 pt-0" id="minus"><i
                                         class="fas fa-caret-down fa-sm"></i></button>
                             </div>
-                            <button class="btn btn-primary pe-5 ps-5" type="button" id="button-addon2">加入購物車</button>
+                            <button type="button" class="btn btn-primary pe-5 ps-5" data-bs-toggle="modal"
+                            data-bs-target="#addCart">加入購物車</button>
+                        <div class="modal fade add-alert" id="addCart" tabindex="-1" aria-labelledby="addCart" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body text-center">
+                                        <h4 class="mb-0">已加入購物車</h4>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#">
-                            <p class="d-flex align-items-center">
-                                <span class="material-icons">favorite</span>加入我的收藏</p>
-                        </a>
+                            
+                        </div>
+                        <button type="button" class="btn btn-link btn-sm p-0 add-btn text-decoration-none" data-bs-toggle="modal"
+                            data-bs-target="#addWishlist">
+                            <p class="d-flex align-items-center"><span class="material-icons me-1">favorite</span>加入我的收藏</p>
+                        </button>
+                        <div class="modal fade add-alert" id="addWishlist" tabindex="-1" aria-labelledby="addWishlist"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body text-center">
+                                        <h4 class="mb-0">已加入我的收藏</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="buyinfo">
                         <h4 class="mb-2">商品購買須知</h4>
